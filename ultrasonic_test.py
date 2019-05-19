@@ -51,7 +51,7 @@ def key_scan():
              pass
                 
 #Ultrasonic function
-def Distance_test():
+def distance_test():
     GPIO.output(TrigPin,GPIO.HIGH)
     time.sleep(0.000015)
     GPIO.output(TrigPin,GPIO.LOW)
@@ -79,12 +79,16 @@ try:
     init()
     # key_scan()
     servo_appointed_detection(0)
+    distance_test()
     time.sleep(2)
     servo_appointed_detection(90)
+    distance_test()
     time.sleep(2)
     servo_appointed_detection(160)
+    distance_test()
     time.sleep(2)
     servo_appointed_detection(90)
+    distance_test()
     time.sleep(2)
        
 except KeyboardInterrupt:
